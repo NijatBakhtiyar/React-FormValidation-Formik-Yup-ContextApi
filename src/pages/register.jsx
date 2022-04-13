@@ -8,13 +8,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify'
 import ColorMode from '../components/colorMode';
 import { useAuthContex } from '../context/authContext'
-{/* <ToastContainer/> */ }
+
 
 function Register() {
   const { mode } = useAuthContex();
   const [formData, setFormData] = useState(null)
 
-  toast.success('Sistemde kayıtlı böyle bir kullanıcı yoktur', 2000);
+  function register() {
+    setTimeout(() => {
+      toast.success('Sisteme kayıt yaptınız', 2000);
+    }, 3000)
+  }
 
   return (
     <div className="register">
@@ -110,11 +114,11 @@ function Register() {
                 <span className='form-error'>{errors.password_confirm}</span>
               </div>
               <div className="form-group checkbox">
-                <input type="checkbox" id="agreement"/>
+                <input type="checkbox" id="agreement" />
                 <label htmlFor='agreement'>Sözleşmeyi kabul ediyorum</label>
               </div>
               <div className="form-group">
-                <button type='submit'>KAYIT OL</button>
+                <button type='submit' onClick={register}>KAYIT OL</button>
               </div>
             </form>
 

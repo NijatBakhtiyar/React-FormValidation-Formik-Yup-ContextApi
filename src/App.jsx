@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import './styles/general.scss';
 import AuthForms from './pages/authForms';
 import { AuthProvider } from './context/authContext';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ function App() {
   return (
     <AuthProvider>
       <AuthForms />
+      <ToastContainer/>
     </AuthProvider>
   )
 }
