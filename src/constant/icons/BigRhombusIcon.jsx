@@ -1,6 +1,6 @@
 import React from "react";
 
-function BigRhombusIcon({params}) {
+function BigRhomb({params}) {
     return (
         <svg width={params?.width || 480} height={params?.height || 80} viewBox="0 0 521 136" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_ddd_1_348)">
@@ -34,4 +34,4 @@ function BigRhombusIcon({params}) {
     );
 }
 
-export default BigRhombusIcon;
+export default BigRhomb;
