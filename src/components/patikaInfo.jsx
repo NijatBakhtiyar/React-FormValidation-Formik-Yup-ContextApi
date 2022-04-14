@@ -1,7 +1,7 @@
 import React from "react";
-import BigRhomb from "../constant/icons/bigRhombusIcon";
+import BigRhomb from "../constant/icons/bigRhombusIcon.jsx";
 import PatikaIcon from "../constant/icons/patikaIcon";
-import SmallRhomb from "../constant/icons/smallRhombusIcon";
+import SmallRhomb from "../constant/icons/smallRhombusIcon.jsx";
 import { useAuthContex } from "../context/authContext";
 
 function PatikaInfo() {
