@@ -1,22 +1,21 @@
-import React, { useContext, useState, useEffect } from "react";
+/* eslint-disable react/prop-types */
+import React, { useContext, useState } from "react";
 
 const AuthContext = React.createContext();
 
-
-const AuthProvider = ({ children }) => {
-    const [registerForm, setRegisterForm] = useState(null)
+function AuthProvider({ children }) {
+    const [registerForm, setRegisterForm] = useState(null);
     const [mode, setMode] = useState("light");
 
-    console.log(registerForm)
+    console.log(registerForm);
 
     function changeMode() {
         if (mode === "light") {
-            setMode("dark")
+            setMode("dark");
         } else {
-            setMode("light")
+            setMode("light");
         }
     }
-
 
     return (
         <AuthContext.Provider
@@ -24,13 +23,15 @@ const AuthProvider = ({ children }) => {
                 registerForm,
                 setRegisterForm,
                 changeMode,
-                mode
+                mode,
             }}
         >
+
             {children}
+
         </AuthContext.Provider>
     );
-};
+}
 
 function useAuthContex() {
     return useContext(AuthContext);

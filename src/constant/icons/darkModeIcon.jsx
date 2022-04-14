@@ -1,3 +1,5 @@
+import React from "react";
+
 function DarkModeIcon({params}) {
     return (
         <svg width={params?.width || 44} height={params?.height || 48} viewBox="0 0 44 48" fill="none" xmlns="http://www.w3.org/2000/svg">

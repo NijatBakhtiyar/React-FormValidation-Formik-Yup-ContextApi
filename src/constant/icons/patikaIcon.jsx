@@ -1,4 +1,6 @@
-function PatikaIcon({ params }) {
+import React from "react";
+
+function PatikaIcon({params}) {
     return (
         <svg width={params?.width || 200} height={params?.height || 100} viewBox="0 0 341 144" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="189" width="19" height="19" fill="#444AFF" />
@@ -17,4 +19,3 @@ function PatikaIcon({ params }) {
 };
 
 export default PatikaIcon;
-

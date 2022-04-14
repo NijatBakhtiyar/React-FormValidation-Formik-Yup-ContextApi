@@ -30,6 +30,25 @@ p {
   color: #444aff;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &.required {
+    label {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        color: #ee6356;
+        content: "*";
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
 label {
   font-weight: 700;
   font-size: 20px;
@@ -55,36 +74,6 @@ input {
   }
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  // &.error {
-  //   input {
-  //     border-color: #ee6356;
-  //     color: #ee6356;
-
-  //     &::placeholder {
-  //       color: #ee6356;
-  //     }
-  //   }
-  // }
-
-  &.required {
-    label {
-      position: relative;
-
-      &::after {
-        position: absolute;
-        color: #ee6356;
-        content: "*";
-        margin-left: 5px;
-      }
-    }
-  }
-}
-
 .form-group.checkbox {
   flex-direction: row;
 
@@ -92,14 +81,12 @@ input {
     position: relative;
     width: 20px;
     height: 20px;
-    border-radius: 12px;
     color: #363839;
     border: 2px solid #8e8e8e;
     border-radius: 4px;
     appearance: none;
     outline: 0;
     cursor: pointer;
-    transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
 
     &::before {
       position: absolute;
@@ -123,10 +110,6 @@ input {
 
       &::before {
         opacity: 1;
-      }
-
-      ~ label::before {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       }
     }
   }

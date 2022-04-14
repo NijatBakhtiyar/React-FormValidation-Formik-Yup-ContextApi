@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
-function BigRhombusIcon({ params }) {
+function BigRhombusIcon({params}) {
     return (
-        <svg width={params?.width || 480} height={params?.height || 96} viewBox="0 0 521 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={params?.width || 480} height={params?.height || 80} viewBox="0 0 521 136" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_ddd_1_348)">
                 <path d="M20.592 115H453.138L500.908 19H68.3616L20.592 115Z" fill={params?.color || "#444AFF"} />
             </g>
@@ -31,8 +31,7 @@ function BigRhombusIcon({ params }) {
                 </filter>
             </defs>
         </svg>
-
-    )
+    );
 }
 
-export default BigRhombusIcon
+export default BigRhombusIcon;
