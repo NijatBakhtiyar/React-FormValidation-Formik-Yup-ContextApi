@@ -2,34 +2,8 @@ import React from "react";
 
 function BigRhomb({params}) {
     return (
-        <svg width={params?.width || 480} height={params?.height || 80} viewBox="0 0 521 136" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_ddd_1_348)">
-                <path d="M20.592 115H453.138L500.908 19H68.3616L20.592 115Z" fill={params?.color || "#444AFF"} />
-            </g>
-            <defs>
-                <filter id="filter0_ddd_1_348" x="0.59198" y="0" width="520.316" height="136" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                    <feOffset dy="2" />
-                    <feGaussianBlur stdDeviation="4" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_348" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                    <feOffset dy="1" />
-                    <feGaussianBlur stdDeviation="10" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0" />
-                    <feBlend mode="normal" in2="effect1_dropShadow_1_348" result="effect2_dropShadow_1_348" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                    <feOffset dy="4" />
-                    <feGaussianBlur stdDeviation="5" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.14 0" />
-                    <feBlend mode="normal" in2="effect2_dropShadow_1_348" result="effect3_dropShadow_1_348" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_1_348" result="shape" />
-                </filter>
-            </defs>
+        <svg width={params?.width || 44} height={params?.height || 48} viewBox="0 0 44 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24.551 48C31.9537 48 38.7147 44.632 43.1939 39.1133C43.8565 38.2969 43.134 37.1042 42.1099 37.2992C30.4659 39.5168 19.7729 30.5889 19.7729 18.8348C19.7729 12.0639 23.3974 5.83772 29.2883 2.48531C30.1964 1.96856 29.968 0.591844 28.9362 0.40125C27.4897 0.134525 26.0219 0.000219032 24.551 0C11.3033 0 0.551025 10.7354 0.551025 24C0.551025 37.2477 11.2864 48 24.551 48Z" fill="#3C3C3C" />
         </svg>
     );
 }
