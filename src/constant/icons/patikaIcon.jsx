@@ -1,6 +1,6 @@
 function PatikaIcon({ params }) {
     return (
-        <svg width={params?.width || 341} height={params?.height || 144} viewBox="0 0 341 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={params?.width || 200} height={params?.height || 100} viewBox="0 0 341 144" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="189" width="19" height="19" fill="#444AFF" />
             <path fillRule="evenodd" clipRule="evenodd" d="M9 9H0V95H19V67H47V57H57V19H47V9H19H9ZM38 57V19H19V57H38Z" fill="#444AFF" />
             <path fillRule="evenodd" clipRule="evenodd" d="M189 29H179V39H189V95H208V39V29H189Z" fill="#444AFF" />

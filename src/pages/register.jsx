@@ -5,20 +5,16 @@ import { RegisterSchema } from '../constant/registerSchema';
 import { useState } from 'react';
 
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import ColorMode from '../components/colorMode';
 import { useAuthContex } from '../context/authContext'
+import LoadingIcon from '../constant/icons/loadingIcon';
 
 
 function Register() {
-  const { mode } = useAuthContex();
-  const [formData, setFormData] = useState(null)
+  const { mode, setRegisterForm, registerForm } = useAuthContex();
+  const [loading, setLoading] = useState(true)
 
-  function register() {
-    setTimeout(() => {
-      toast.success('Sisteme kayıt yaptınız', 2000);
-    }, 3000)
-  }
 
   return (
     <div className="register">
@@ -35,9 +31,14 @@ function Register() {
           password: '',
           password_confirm: ''
         }}
-        onSubmit={auth => {
-          setFormData(auth)
-          // console.log(auth)
+        onSubmit={(auth, { resetForm }) => {
+          setRegisterForm(auth);
+          setLoading(true)
+          setTimeout(() => {
+            toast.success('Sisteme kayıt yaptınız', 2000);
+            resetForm()
+            setLoading(false)
+          }, 3000)
         }}
         validationSchema={RegisterSchema}
       >
@@ -46,7 +47,7 @@ function Register() {
 
             <form onSubmit={handleSubmit}>
               <div className="row">
-                <div className={errors.first_name ? "form-group error" : "form-group" && values.first_name ? "form-group" : "form-group required"}>
+                <div className={values.first_name ? "form-group" : "form-group required"}>
                   <label>İSİM</label>
                   <input
                     type="text"
@@ -55,9 +56,9 @@ function Register() {
                     value={values.first_name}
                     onChange={handleChange}
                   />
-                  <span className='form-error'>{errors.first_name}</span>
+                  <span className='form-error'>{touched.first_name && errors.first_name}</span>
                 </div>
-                <div className={errors.last_name ? "form-group error" : "form-group" && values.last_name ? "form-group" : "form-group required"}>
+                <div className={values.last_name ? "form-group" : "form-group required"}>
                   <label>SOYİSİM</label>
                   <input
                     type="text"
@@ -66,10 +67,10 @@ function Register() {
                     value={values.last_name}
                     onChange={handleChange}
                   />
-                  <span className='form-error'>{errors.last_name}</span>
+                  <span className='form-error'>{touched.last_name && errors.last_name}</span>
                 </div>
               </div>
-              <div className={errors.email ? "form-group error" : "form-group" && values.email ? "form-group" : "form-group required"}>
+              <div className={values.email ? "form-group" : "form-group required"}>
                 <label >E-POSTA</label>
                 <input
                   type="text"
@@ -78,9 +79,9 @@ function Register() {
                   value={values.email}
                   onChange={handleChange}
                 />
-                <span className='form-error'>{errors.email}</span>
+                <span className='form-error'>{touched.email && errors.email}</span>
               </div>
-              <div className={errors.user_name ? "form-group error" : "form-group" && values.user_name ? "form-group" : "form-group required"}>
+              <div className={values.user_name ? "form-group" : "form-group required"}>
                 <label>KULLANICI ADI</label>
                 <input
                   type="text"
@@ -89,9 +90,9 @@ function Register() {
                   value={values.user_name}
                   onChange={handleChange}
                 />
-                <span className='form-error'>{errors.user_name}</span>
+                <span className='form-error'>{touched.user_name && errors.user_name}</span>
               </div>
-              <div className={errors.password ? "form-group error" : "form-group" && values.password ? "form-group" : "form-group required"}>
+              <div className={values.password ? "form-group" : "form-group required"}>
                 <label>ŞİFRE</label>
                 <input
                   type="password"
@@ -100,9 +101,9 @@ function Register() {
                   value={values.password}
                   onChange={handleChange}
                 />
-                <span className='form-error'>{errors.password}</span>
+                <span className='form-error'>{touched.password && errors.password}</span>
               </div>
-              <div className={errors.password_confirm ? "form-group error" : "form-group" && values.password_confirm ? "form-group" : "form-group required"}>
+              <div className={values.password_confirm ? "form-group" : "form-group required"}>
                 <label>ŞİFRENİ TEKRAR GİR</label>
                 <input
                   type="password"
@@ -111,20 +112,23 @@ function Register() {
                   value={values.password_confirm}
                   onChange={handleChange}
                 />
-                <span className='form-error'>{errors.password_confirm}</span>
+                <span className='form-error'>{touched.password_confirm && errors.password_confirm}</span>
               </div>
               <div className="form-group checkbox">
                 <input type="checkbox" id="agreement" />
                 <label htmlFor='agreement'>Sözleşmeyi kabul ediyorum</label>
               </div>
               <div className="form-group">
-                <button type='submit' onClick={register}>KAYIT OL</button>
+                <button
+                  type='submit'
+                  className={loading && "disabled"}
+                  disabled={loading}>
+                  {loading ? <LoadingIcon /> : "KAYIT OL"}
+                </button>
               </div>
             </form>
-
         }
       </Formik>
-
       <ColorMode />
     </div>
   )

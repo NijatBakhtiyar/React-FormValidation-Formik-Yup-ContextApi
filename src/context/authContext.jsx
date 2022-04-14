@@ -4,7 +4,10 @@ const AuthContext = React.createContext();
 
 
 const AuthProvider = ({ children }) => {
+    const [registerForm, setRegisterForm] = useState(null)
     const [mode, setMode] = useState("light");
+
+    console.log(registerForm)
 
     function changeMode() {
         if (mode === "light") {
@@ -18,6 +21,8 @@ const AuthProvider = ({ children }) => {
     return (
         <AuthContext.Provider
             value={{
+                registerForm,
+                setRegisterForm,
                 changeMode,
                 mode
             }}

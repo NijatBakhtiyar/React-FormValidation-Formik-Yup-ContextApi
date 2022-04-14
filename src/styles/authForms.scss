@@ -4,11 +4,19 @@
   .patika-info {
     background: #dadada;
     flex: 1;
-    padding: 56px;
+    padding: 25px;
+    height: 100vh;
 
     h1 {
-      margin-top: 45px;
-      margin-bottom: 30px;
+      font-size: 50px;
+      margin-top: 25px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
 
     .icons {
@@ -24,11 +32,13 @@
 
   .register {
     flex: 1;
-    padding: 56px;
+    padding: 25px 80px;
     position: relative;
+    height: 100vh;
+    overflow-y: scroll;
 
     .title {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
 
     .row {
@@ -46,11 +56,15 @@
       width: 100%;
       color: #fff;
       border-radius: 4px;
-      padding: 19px;
+      height: 60px;
       margin-top: 20px;
       border: none;
+      font-size: 16px;
       font-weight: 700;
       cursor: pointer;
+      &.disabled {
+        opacity: 0.5;
+      }
     }
 
     .form-error {
@@ -86,7 +100,7 @@
       color: #fff;
     }
 
-    input{
+    input {
       background: transparent;
     }
 

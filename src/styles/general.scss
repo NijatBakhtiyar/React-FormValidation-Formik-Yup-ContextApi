@@ -59,19 +59,17 @@ input {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
 
-  &.error {
-    input {
-      border-color: #ee6356;
-      color: #ee6356;
+  // &.error {
+  //   input {
+  //     border-color: #ee6356;
+  //     color: #ee6356;
 
-      &::placeholder {
-        color: #ee6356;
-      }
-    }
-  }
+  //     &::placeholder {
+  //       color: #ee6356;
+  //     }
+  //   }
+  // }
 
   &.required {
     label {
