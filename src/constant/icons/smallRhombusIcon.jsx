@@ -1,6 +1,6 @@
 import React from "react";
 
-function smallRhombusIcon({params}) {
+function SmallRhombusIcon({params}) {
     return (
         <svg
             width={params?.width || 320}
@@ -54,4 +54,4 @@ function smallRhombusIcon({params}) {
     );
 };
 
-export default smallRhombusIcon;
+export default SmallRhombusIcon;
