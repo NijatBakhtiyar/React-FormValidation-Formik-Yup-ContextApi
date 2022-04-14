@@ -1,1 +1,1 @@
-[[redirects]]   from = "/*"   to = "/index.html"   status = 200
+[[redirects]]   from = "https://react-formik-validation.netlify.app/auth*"   to = "https://react-formik-validation.netlify.app/"   status = 200
