@@ -8,4 +8,5 @@ function BigRhomb({params}) {
     );
 }
 
+
 export default BigRhomb;
