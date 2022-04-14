@@ -20,5 +20,4 @@ function PatikaInfo() {
     );
 }
 
-
 export default PatikaInfo;
