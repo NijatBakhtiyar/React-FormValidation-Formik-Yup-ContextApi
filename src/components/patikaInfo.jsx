@@ -3,6 +3,7 @@ import React from "react";
 import PatikaIcon from "../constant/icons/patikaIcon";
 // import SmallRhombusIcon from "../constant/icons/smallRhombusIcon";
 // import { useAuthContex } from "../context/authContext";
+import LoadingIcon from "../constant/icons/loadingIcon";
 
 function PatikaInfo() {
     // const { mode } = useAuthContex();
@@ -15,6 +16,7 @@ function PatikaInfo() {
             <div className="icons">
                 {/* <SmallRhombusIcon params={mode === "dark" && { color: "#FFBF5E" }} /> */}
                 {/* <BigRhombusIcon params={mode === "dark" && { color: "#FFBF5E" }} /> */}
+                <LoadingIcon/>
             </div>
         </div>
     );
