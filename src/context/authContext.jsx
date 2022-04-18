@@ -7,8 +7,6 @@ function AuthProvider({ children }) {
     const [registerForm, setRegisterForm] = useState(null);
     const [mode, setMode] = useState("light");
 
-    console.log(registerForm);
-
     function changeMode() {
         if (mode === "light") {
             setMode("dark");
